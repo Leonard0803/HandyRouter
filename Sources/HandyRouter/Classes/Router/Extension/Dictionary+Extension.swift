@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Dictionary where Key == String, Value == Any {
+public extension Dictionary where Key == String, Value == Any {
     func route_decodeParameter(option: [RouteOption]) -> Dictionary {
         guard option.contains(.decodePlusSymbol) else { return self }
         var newDict: [String: Any] = [:]

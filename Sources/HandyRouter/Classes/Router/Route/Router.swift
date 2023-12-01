@@ -33,7 +33,7 @@ public class Router {
     }
 
     public func unRegister<T: Jumper>(jumper: T.Type, scheme: String = Router.defaultScheme) {
-        let route = searchRoutes(for: scheme)
+        let route = searchRoutes(scheme: scheme)
         let pattern = jumper.module.trimmingCharacters(in: ["/"])
         let definition = Definition<T>.init(jumper: jumper, pattern: pattern + "/\(Router.pagePlaceHolder)")
         definition.expandPattern().forEach { definition in
@@ -58,7 +58,7 @@ public class Router {
         }
     }
     
-    public func searchRoutes(for scheme: String) -> Routes {
+    public func searchRoutes(scheme: String) -> Routes {
         if let route = routes[scheme] {
             return route
         } else {
@@ -85,5 +85,10 @@ public class Router {
         } else {
             return didRoute
         }
+    }
+    
+    public func add(interceptor: RouteInterceptor, for scheme: String = defaultScheme) {
+        let route = self.searchRoutes(scheme: scheme)
+        route.add(interceptor: interceptor)
     }
 }

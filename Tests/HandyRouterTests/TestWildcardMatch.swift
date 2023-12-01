@@ -9,15 +9,7 @@ import XCTest
 @testable import HandyRouter
 
 final class TestWildcardMatch: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
+    
     func testExample() throws {
         XCTAssertTrue(Validator.matchWildcardPath(urls: ["A", "B"] , availablePath: ["A", "*"]))
         XCTAssertTrue(Validator.matchWildcardPath(urls: ["A", "B", "C"], availablePath: ["*", "B", "C"]))
@@ -54,12 +46,4 @@ final class TestWildcardMatch: XCTestCase {
         XCTAssertFalse(Validator.matchWildcardPath(urls: ["A", "B", "C"], availablePath: ["A", "Y", "*"]))
         XCTAssertFalse(Validator.matchWildcardPath(urls: ["A", "B", "C"], availablePath: ["X", "Y", "*"]))
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

@@ -70,6 +70,10 @@ public class Routes {
         interceptors.append(interceptor)
     }
     
+    func removeAllInterceptor() {
+        interceptors = []
+    }
+    
     func route(to resource: Resource, parameters: [String: Any], execute: Bool) -> Bool {
         var canRoute = false
         guard let url = resource.url else {
