@@ -1,0 +1,743 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07DF26D700AD82C69A7130EB42692342 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E83B1B8DFE16D99CEB0CCEF63ACDD9 /* Dictionary+Extension.swift */; };
+		08B061496B498CD7247A2EECD48F0043 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A6C65D00CAE9381D2168A61B9DD3FA /* String+Extension.swift */; };
+		0E96FBDA73C9EA9E9A8B5B6AC23B5496 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FB38CF52D1C296B4F198AB58771C7D /* Request.swift */; };
+		166A2CF7C3E682673296F88A7910C3CD /* ParameterKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC7CABB0A1709CA8B9F6A12A3A5A0DF /* ParameterKey.swift */; };
+		1871BAACF837C4FF7E91EF1A8CE90119 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3955EB360CEDE516BCFAB6137EEF69 /* Definition.swift */; };
+		1E3894C01425DA6D33EE724BC9E908DD /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EF419CE598B6CE13A6AC94F4F9C7B9 /* Validator.swift */; };
+		1F23EBDCFF876256F97FF65904A81B6E /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B760A12B9E6E34322A5CF0D9499EDC2 /* Routes.swift */; };
+		43BA800EA92E63813776DE7F6F042D35 /* DeeplinkInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C53EF99661F18B784504CD145E2CB554 /* DeeplinkInterceptor.swift */; };
+		4643BDD24726D6A48EBEEE5F7EAE5097 /* RouterPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117DB9827F6176AEB2FAEC6AAE35DD88 /* RouterPage.swift */; };
+		5D44F7B53A20E60E4057A5EDF189A0E7 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE96889100FCA8C554FD1E11614393 /* Resource.swift */; };
+		78A279483968F51FFBF39F63604DEB77 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537663A37E2A8CD34740A334283978F5 /* UIViewController+Extension.swift */; };
+		7A1425155D35319109209BCE3C58AC60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		7DC60E6AA76695660D51AD9E34E381E4 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548C982E0D5274FEEA08D903D076AFC8 /* Response.swift */; };
+		819FA34E89B2752AA95BCA25E4CA3938 /* Pods-HandyRouter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EEA80C524227F4D1BFB843CF22A04EA /* Pods-HandyRouter_Example-dummy.m */; };
+		85A61BB9C1A981ED572614028FEDD417 /* Jumper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67A4DB441770493636EDE63A30FE3DF /* Jumper.swift */; };
+		871457EFB2E0A0DF60E813850B7A0327 /* Pods-HandyRouter_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 95057AE26DFE32912F8C27236D2D8DE2 /* Pods-HandyRouter_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F4DA26DEE21658EAF5D71E30E58C011 /* RouteInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC37F84332376DB19B18C91728416BF /* RouteInterceptor.swift */; };
+		A87BF4EE21EBDBF6ED1409E3896DFC97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		B2466D49F509558854B9F704A792D7AC /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E677753A71F200D634826DE262D8B9 /* Array+Extension.swift */; };
+		B690695A3468DA9BAE1CEBEE40A69827 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51E81309CBBE1B48E03ACBE72371E84 /* Router.swift */; };
+		B6AC111C942A1CA59EFD773E20D865D5 /* URLComponent+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482FC6FC5EC8DAEB7FDD5499209F5F47 /* URLComponent+Extension.swift */; };
+		B9E265921D3BAC80943A13C1781FDEB7 /* MoudleMatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B71220A789249D75615A8DC6FED18A4 /* MoudleMatchable.swift */; };
+		BD8FC85D4BE9F850C26E531C5EB919E9 /* SubPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BDEA16AA15871FB5515E5BCEBA7E2A /* SubPath.swift */; };
+		C4D2D9A6BA4A649CFA80654BFCD1F0EC /* HandyRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFCEC63D652314F53E99C4855B452D1 /* HandyRouter-dummy.m */; };
+		CB863C44ACFB880DD219F0E96E68C033 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		E68C01682EB3C7D65125A10F3F3CCB65 /* HandyRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4E85F058275EA77A2BF3BF14D6162E1 /* HandyRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AB25013A8FEF7C5A5DB4A129FC2A78A3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87FBF27159EA86BAEE0AE87812722551;
+			remoteInfo = HandyRouter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		054ACB5C7BF628809493EF52F5B6649B /* Pods-HandyRouter_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HandyRouter_Example.modulemap"; sourceTree = "<group>"; };
+		09F5039C6393585DB598D85276836260 /* HandyRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HandyRouter.modulemap; sourceTree = "<group>"; };
+		0BC37F84332376DB19B18C91728416BF /* RouteInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouteInterceptor.swift; sourceTree = "<group>"; };
+		0C3955EB360CEDE516BCFAB6137EEF69 /* Definition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
+		0EC7CABB0A1709CA8B9F6A12A3A5A0DF /* ParameterKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ParameterKey.swift; sourceTree = "<group>"; };
+		117DB9827F6176AEB2FAEC6AAE35DD88 /* RouterPage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RouterPage.swift; sourceTree = "<group>"; };
+		11BE9F9B271C75CB401E3F59F7DE348E /* HandyRouter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HandyRouter-prefix.pch"; sourceTree = "<group>"; };
+		18912583FFA8BE05703FAC6AA2AED23D /* Pods-HandyRouter_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HandyRouter_Example-frameworks.sh"; sourceTree = "<group>"; };
+		24876F87F0D6AEC53703CDC9780913DB /* HandyRouter.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HandyRouter.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		2E18DBB416F5BA18D2D262DE57087A24 /* Pods-HandyRouter_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HandyRouter_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		2EEA80C524227F4D1BFB843CF22A04EA /* Pods-HandyRouter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HandyRouter_Example-dummy.m"; sourceTree = "<group>"; };
+		30A5C9B2907D6B1E5D717F86EF9A0F30 /* HandyRouter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HandyRouter.debug.xcconfig; sourceTree = "<group>"; };
+		369676F5CB3195ACFE83816DF0919456 /* Pods-HandyRouter_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HandyRouter_Example-Info.plist"; sourceTree = "<group>"; };
+		3B71220A789249D75615A8DC6FED18A4 /* MoudleMatchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MoudleMatchable.swift; sourceTree = "<group>"; };
+		4756D5021D2DAE723546ED22F27526EC /* Pods-HandyRouter_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HandyRouter_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		482FC6FC5EC8DAEB7FDD5499209F5F47 /* URLComponent+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "URLComponent+Extension.swift"; sourceTree = "<group>"; };
+		48E677753A71F200D634826DE262D8B9 /* Array+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		49FC38A9B1BDE0249C1DE41D84DB17C3 /* HandyRouter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HandyRouter-Info.plist"; sourceTree = "<group>"; };
+		537663A37E2A8CD34740A334283978F5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		548C982E0D5274FEEA08D903D076AFC8 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		68BDEA16AA15871FB5515E5BCEBA7E2A /* SubPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SubPath.swift; sourceTree = "<group>"; };
+		783A42FD2F7D27516B378B7F96E7922D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8B760A12B9E6E34322A5CF0D9499EDC2 /* Routes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		90CEC90B688E8656F80F0D8F6D89692A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		91A6C65D00CAE9381D2168A61B9DD3FA /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		95057AE26DFE32912F8C27236D2D8DE2 /* Pods-HandyRouter_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HandyRouter_Example-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; };
+		B1E83B1B8DFE16D99CEB0CCEF63ACDD9 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		C45A3C6AC35EDCA10E3E18A5D9DED178 /* Pods-HandyRouter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HandyRouter_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C53EF99661F18B784504CD145E2CB554 /* DeeplinkInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeeplinkInterceptor.swift; sourceTree = "<group>"; };
+		CCCE96889100FCA8C554FD1E11614393 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		D0C021AC1857E600386FABE4572EE034 /* Pods-HandyRouter_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-HandyRouter_Example"; path = Pods_HandyRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D4E85F058275EA77A2BF3BF14D6162E1 /* HandyRouter-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HandyRouter-umbrella.h"; sourceTree = "<group>"; };
+		D89F9754B21276791C7C02CDDB825569 /* Pods-HandyRouter_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HandyRouter_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D8EE2645580DC5F7EBB07A47D9757979 /* HandyRouter */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HandyRouter; path = HandyRouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5EF419CE598B6CE13A6AC94F4F9C7B9 /* Validator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		E67A4DB441770493636EDE63A30FE3DF /* Jumper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Jumper.swift; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		EC5F11DF6FBC4FF8D4C72D8DEA0372BC /* HandyRouter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HandyRouter.release.xcconfig; sourceTree = "<group>"; };
+		EFFCEC63D652314F53E99C4855B452D1 /* HandyRouter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HandyRouter-dummy.m"; sourceTree = "<group>"; };
+		F51E81309CBBE1B48E03ACBE72371E84 /* Router.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		F9FB38CF52D1C296B4F198AB58771C7D /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EB2A56AD765F7DAE64CFFB7296D48A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB863C44ACFB880DD219F0E96E68C033 /* Foundation.framework in Frameworks */,
+				A87BF4EE21EBDBF6ED1409E3896DFC97 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48933EF3517008DD84ACD088A2D5976B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A1425155D35319109209BCE3C58AC60 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14346BBD58D580431A47699C23401139 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				09F5039C6393585DB598D85276836260 /* HandyRouter.modulemap */,
+				EFFCEC63D652314F53E99C4855B452D1 /* HandyRouter-dummy.m */,
+				49FC38A9B1BDE0249C1DE41D84DB17C3 /* HandyRouter-Info.plist */,
+				11BE9F9B271C75CB401E3F59F7DE348E /* HandyRouter-prefix.pch */,
+				D4E85F058275EA77A2BF3BF14D6162E1 /* HandyRouter-umbrella.h */,
+				30A5C9B2907D6B1E5D717F86EF9A0F30 /* HandyRouter.debug.xcconfig */,
+				EC5F11DF6FBC4FF8D4C72D8DEA0372BC /* HandyRouter.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HandyRouter";
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3641F2FB746A0782216682414CBEB34B /* Pods-HandyRouter_Example */ = {
+			isa = PBXGroup;
+			children = (
+				054ACB5C7BF628809493EF52F5B6649B /* Pods-HandyRouter_Example.modulemap */,
+				4756D5021D2DAE723546ED22F27526EC /* Pods-HandyRouter_Example-acknowledgements.markdown */,
+				2E18DBB416F5BA18D2D262DE57087A24 /* Pods-HandyRouter_Example-acknowledgements.plist */,
+				2EEA80C524227F4D1BFB843CF22A04EA /* Pods-HandyRouter_Example-dummy.m */,
+				18912583FFA8BE05703FAC6AA2AED23D /* Pods-HandyRouter_Example-frameworks.sh */,
+				369676F5CB3195ACFE83816DF0919456 /* Pods-HandyRouter_Example-Info.plist */,
+				95057AE26DFE32912F8C27236D2D8DE2 /* Pods-HandyRouter_Example-umbrella.h */,
+				C45A3C6AC35EDCA10E3E18A5D9DED178 /* Pods-HandyRouter_Example.debug.xcconfig */,
+				D89F9754B21276791C7C02CDDB825569 /* Pods-HandyRouter_Example.release.xcconfig */,
+			);
+			name = "Pods-HandyRouter_Example";
+			path = "Target Support Files/Pods-HandyRouter_Example";
+			sourceTree = "<group>";
+		};
+		37B8B1EFCBF31F527A3F5CD49CA7F6B0 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7C35AB04B25EE2734CF183102D054CD /* HandyRouter */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		60DADDF34204462E2A084CC5D6A81391 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8EE2645580DC5F7EBB07A47D9757979 /* HandyRouter */,
+				D0C021AC1857E600386FABE4572EE034 /* Pods-HandyRouter_Example */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DE4FF607700168DAD538D3A374A815D /* URLParsers */ = {
+			isa = PBXGroup;
+			children = (
+				F9FB38CF52D1C296B4F198AB58771C7D /* Request.swift */,
+				548C982E0D5274FEEA08D903D076AFC8 /* Response.swift */,
+				68BDEA16AA15871FB5515E5BCEBA7E2A /* SubPath.swift */,
+				E5EF419CE598B6CE13A6AC94F4F9C7B9 /* Validator.swift */,
+			);
+			name = URLParsers;
+			path = Sources/HandyRouter/Classes/Router/URLParsers;
+			sourceTree = "<group>";
+		};
+		9F600A69A1CFF83BF7D4D0D05B014273 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				48E677753A71F200D634826DE262D8B9 /* Array+Extension.swift */,
+				B1E83B1B8DFE16D99CEB0CCEF63ACDD9 /* Dictionary+Extension.swift */,
+				91A6C65D00CAE9381D2168A61B9DD3FA /* String+Extension.swift */,
+				537663A37E2A8CD34740A334283978F5 /* UIViewController+Extension.swift */,
+				482FC6FC5EC8DAEB7FDD5499209F5F47 /* URLComponent+Extension.swift */,
+			);
+			name = Extension;
+			path = Sources/HandyRouter/Classes/Router/Extension;
+			sourceTree = "<group>";
+		};
+		A5BFD94BE9DF6F56A64F1117B4F1C5F6 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				E67A4DB441770493636EDE63A30FE3DF /* Jumper.swift */,
+				3B71220A789249D75615A8DC6FED18A4 /* MoudleMatchable.swift */,
+				CCCE96889100FCA8C554FD1E11614393 /* Resource.swift */,
+				0BC37F84332376DB19B18C91728416BF /* RouteInterceptor.swift */,
+				117DB9827F6176AEB2FAEC6AAE35DD88 /* RouterPage.swift */,
+			);
+			name = Protocol;
+			path = Sources/HandyRouter/Classes/Router/Protocol;
+			sourceTree = "<group>";
+		};
+		C67BD86C7D603781F5AE2B7F90CBB344 /* Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				0C3955EB360CEDE516BCFAB6137EEF69 /* Definition.swift */,
+			);
+			name = Definitions;
+			path = Sources/HandyRouter/Classes/Router/Definitions;
+			sourceTree = "<group>";
+		};
+		C78AB1A4136FDBA3A5BDD0D2FBD2A547 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				C53EF99661F18B784504CD145E2CB554 /* DeeplinkInterceptor.swift */,
+				0EC7CABB0A1709CA8B9F6A12A3A5A0DF /* ParameterKey.swift */,
+				F51E81309CBBE1B48E03ACBE72371E84 /* Router.swift */,
+				8B760A12B9E6E34322A5CF0D9499EDC2 /* Routes.swift */,
+			);
+			name = Route;
+			path = Sources/HandyRouter/Classes/Router/Route;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				37B8B1EFCBF31F527A3F5CD49CA7F6B0 /* Development Pods */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				60DADDF34204462E2A084CC5D6A81391 /* Products */,
+				FB6A574656BE87F02C2EEAC3AC88CC04 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D18CE9B22CE00D5D531745491601783A /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				24876F87F0D6AEC53703CDC9780913DB /* HandyRouter.podspec */,
+				90CEC90B688E8656F80F0D8F6D89692A /* LICENSE */,
+				783A42FD2F7D27516B378B7F96E7922D /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		F7C35AB04B25EE2734CF183102D054CD /* HandyRouter */ = {
+			isa = PBXGroup;
+			children = (
+				C67BD86C7D603781F5AE2B7F90CBB344 /* Definitions */,
+				9F600A69A1CFF83BF7D4D0D05B014273 /* Extension */,
+				D18CE9B22CE00D5D531745491601783A /* Pod */,
+				A5BFD94BE9DF6F56A64F1117B4F1C5F6 /* Protocol */,
+				C78AB1A4136FDBA3A5BDD0D2FBD2A547 /* Route */,
+				14346BBD58D580431A47699C23401139 /* Support Files */,
+				6DE4FF607700168DAD538D3A374A815D /* URLParsers */,
+			);
+			name = HandyRouter;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		FB6A574656BE87F02C2EEAC3AC88CC04 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3641F2FB746A0782216682414CBEB34B /* Pods-HandyRouter_Example */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		173FD44354F9E247BC4509F27F0A59B2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				871457EFB2E0A0DF60E813850B7A0327 /* Pods-HandyRouter_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B661567F52F4C0B91213AEA751848A51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E68C01682EB3C7D65125A10F3F3CCB65 /* HandyRouter-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D3E33CEFFD05E7F1665BFA03D769EFD /* Pods-HandyRouter_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 647D26A3B4B172D1A88B90E3A8F0DD4B /* Build configuration list for PBXNativeTarget "Pods-HandyRouter_Example" */;
+			buildPhases = (
+				173FD44354F9E247BC4509F27F0A59B2 /* Headers */,
+				261AFBA2D7C141C129A4275A33C2F7D4 /* Sources */,
+				48933EF3517008DD84ACD088A2D5976B /* Frameworks */,
+				EC6BE7C0348F707B7E3A576C2EADC281 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3997FC07EE224CDC6733CEE6FA7CA6C7 /* PBXTargetDependency */,
+			);
+			name = "Pods-HandyRouter_Example";
+			productName = Pods_HandyRouter_Example;
+			productReference = D0C021AC1857E600386FABE4572EE034 /* Pods-HandyRouter_Example */;
+			productType = "com.apple.product-type.framework";
+		};
+		87FBF27159EA86BAEE0AE87812722551 /* HandyRouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22E21670D1484A51A7FC282545C6F416 /* Build configuration list for PBXNativeTarget "HandyRouter" */;
+			buildPhases = (
+				B661567F52F4C0B91213AEA751848A51 /* Headers */,
+				32FF5BBE1B0B9208675D7E403CFEB72B /* Sources */,
+				0EB2A56AD765F7DAE64CFFB7296D48A7 /* Frameworks */,
+				326F59985110ACBDA2C13DBB1E9CA4D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HandyRouter;
+			productName = HandyRouter;
+			productReference = D8EE2645580DC5F7EBB07A47D9757979 /* HandyRouter */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 60DADDF34204462E2A084CC5D6A81391 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87FBF27159EA86BAEE0AE87812722551 /* HandyRouter */,
+				1D3E33CEFFD05E7F1665BFA03D769EFD /* Pods-HandyRouter_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		326F59985110ACBDA2C13DBB1E9CA4D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6BE7C0348F707B7E3A576C2EADC281 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		261AFBA2D7C141C129A4275A33C2F7D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				819FA34E89B2752AA95BCA25E4CA3938 /* Pods-HandyRouter_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32FF5BBE1B0B9208675D7E403CFEB72B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2466D49F509558854B9F704A792D7AC /* Array+Extension.swift in Sources */,
+				43BA800EA92E63813776DE7F6F042D35 /* DeeplinkInterceptor.swift in Sources */,
+				1871BAACF837C4FF7E91EF1A8CE90119 /* Definition.swift in Sources */,
+				07DF26D700AD82C69A7130EB42692342 /* Dictionary+Extension.swift in Sources */,
+				C4D2D9A6BA4A649CFA80654BFCD1F0EC /* HandyRouter-dummy.m in Sources */,
+				85A61BB9C1A981ED572614028FEDD417 /* Jumper.swift in Sources */,
+				B9E265921D3BAC80943A13C1781FDEB7 /* MoudleMatchable.swift in Sources */,
+				166A2CF7C3E682673296F88A7910C3CD /* ParameterKey.swift in Sources */,
+				0E96FBDA73C9EA9E9A8B5B6AC23B5496 /* Request.swift in Sources */,
+				5D44F7B53A20E60E4057A5EDF189A0E7 /* Resource.swift in Sources */,
+				7DC60E6AA76695660D51AD9E34E381E4 /* Response.swift in Sources */,
+				8F4DA26DEE21658EAF5D71E30E58C011 /* RouteInterceptor.swift in Sources */,
+				B690695A3468DA9BAE1CEBEE40A69827 /* Router.swift in Sources */,
+				4643BDD24726D6A48EBEEE5F7EAE5097 /* RouterPage.swift in Sources */,
+				1F23EBDCFF876256F97FF65904A81B6E /* Routes.swift in Sources */,
+				08B061496B498CD7247A2EECD48F0043 /* String+Extension.swift in Sources */,
+				BD8FC85D4BE9F850C26E531C5EB919E9 /* SubPath.swift in Sources */,
+				78A279483968F51FFBF39F63604DEB77 /* UIViewController+Extension.swift in Sources */,
+				B6AC111C942A1CA59EFD773E20D865D5 /* URLComponent+Extension.swift in Sources */,
+				1E3894C01425DA6D33EE724BC9E908DD /* Validator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3997FC07EE224CDC6733CEE6FA7CA6C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HandyRouter;
+			target = 87FBF27159EA86BAEE0AE87812722551 /* HandyRouter */;
+			targetProxy = AB25013A8FEF7C5A5DB4A129FC2A78A3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		A49D4BFE27D0E2ED21C250ACC72A17B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C45A3C6AC35EDCA10E3E18A5D9DED178 /* Pods-HandyRouter_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HandyRouter_Example/Pods-HandyRouter_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HandyRouter_Example/Pods-HandyRouter_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BDCCDD9790D7774FEA04B8323C105128 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D89F9754B21276791C7C02CDDB825569 /* Pods-HandyRouter_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-HandyRouter_Example/Pods-HandyRouter_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-HandyRouter_Example/Pods-HandyRouter_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C8C40843B62B193E4D73FAFD116D57E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30A5C9B2907D6B1E5D717F86EF9A0F30 /* HandyRouter.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HandyRouter/HandyRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HandyRouter/HandyRouter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HandyRouter/HandyRouter.modulemap";
+				PRODUCT_MODULE_NAME = HandyRouter;
+				PRODUCT_NAME = HandyRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		FDC86C5E12EDABB5A23F342737B734B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC5F11DF6FBC4FF8D4C72D8DEA0372BC /* HandyRouter.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HandyRouter/HandyRouter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HandyRouter/HandyRouter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/HandyRouter/HandyRouter.modulemap";
+				PRODUCT_MODULE_NAME = HandyRouter;
+				PRODUCT_NAME = HandyRouter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22E21670D1484A51A7FC282545C6F416 /* Build configuration list for PBXNativeTarget "HandyRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8C40843B62B193E4D73FAFD116D57E9 /* Debug */,
+				FDC86C5E12EDABB5A23F342737B734B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		647D26A3B4B172D1A88B90E3A8F0DD4B /* Build configuration list for PBXNativeTarget "Pods-HandyRouter_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A49D4BFE27D0E2ED21C250ACC72A17B8 /* Debug */,
+				BDCCDD9790D7774FEA04B8323C105128 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

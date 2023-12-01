@@ -1,0 +1,6 @@
+framework module HandyRouter {
+  umbrella header "HandyRouter-umbrella.h"
+
+  export *
+  module * { export * }
+}

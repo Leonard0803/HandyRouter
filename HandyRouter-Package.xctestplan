@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "260EC61D-0C95-4F44-B61A-D86403637AA3",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "HandyRouterTests",
+        "name" : "HandyRouterTests"
+      }
+    }
+  ],
+  "version" : 1
+}

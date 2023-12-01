@@ -1,0 +1,16 @@
+PODS:
+  - HandyRouter (0.1.0)
+
+DEPENDENCIES:
+  - HandyRouter (from `../`)
+
+EXTERNAL SOURCES:
+  HandyRouter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HandyRouter: aeca5be3378cc53ae5a64ca578cb3ce87fbb704a
+
+PODFILE CHECKSUM: 445a2966108025452d7fd9a3a290c6904a44cb03
+
+COCOAPODS: 1.14.2
