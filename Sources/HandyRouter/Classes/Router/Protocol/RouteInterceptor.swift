@@ -12,5 +12,6 @@ public enum RouteInterceptorState {
 }
 
 public protocol RouteInterceptor {
+    
     func perform(parameters: [String : Any]) -> RouteInterceptorState
 }

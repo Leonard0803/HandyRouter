@@ -13,12 +13,10 @@ public class Request {
     var pathComponents: [String] = []
     var parameters: [String: Any] = [:]
     
-    init(url: String, additionalParameter: [String: Any], option: [RouteOption]) {
+    init(url: String,
+         additionalParameter: [String: Any] = [:],
+         option: [RouteOption] = []) {
         self.url = url
-        parse(url: url, additionalParameter: additionalParameter, option: option)
-    }
-    
-    func parse(url: String, additionalParameter: [String: Any], option: [RouteOption]) {
         guard var urlcomponent = URLComponents.init(string: url) else { return }
         if option.contains(.treatHostAsPathComponent) {
             urlcomponent.path = (urlcomponent.host?.removingPercentEncoding ?? "") + urlcomponent.path
@@ -30,14 +28,17 @@ public class Request {
         if let fragment = urlcomponent.fragment,
            fragment.isEmpty == false,
            var fragmentComponent = URLComponents.init(string: fragment) {
-            if fragmentComponent.query?.isEmpty == true {
+            if fragmentComponent.query == nil || fragmentComponent.query?.isEmpty == true {
+                // If the URL fragment does not contain a query part, attempt to interpret the path as a query. If successfully parsed, the fragment will be treated as part of the parameter, rather than being considered part of the page name.
                 fragmentComponent.query = fragmentComponent.path
             }
             var fragmentContainQueryItems = false
             if let fragmentQueryItems = fragmentComponent.queryItems {
-                fragmentContainQueryItems = true
                 fragmentQueryItems.forEach { item in
                     parameters[item.name] = item.value
+                }
+                if parameters.isEmpty == false {
+                    fragmentContainQueryItems = true
                 }
             }
 

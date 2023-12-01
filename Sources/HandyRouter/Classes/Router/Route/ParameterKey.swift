@@ -19,7 +19,7 @@ public struct ParameterKey: Hashable, ExpressibleByStringLiteral, CustomStringCo
     }
 }
 
-extension ParameterKey {
+public extension ParameterKey {
     static let page: ParameterKey = "__PAGE__"
     static let url: ParameterKey = "__URL__"
 }

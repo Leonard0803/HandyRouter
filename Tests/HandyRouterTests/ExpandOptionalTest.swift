@@ -10,17 +10,14 @@ import XCTest
 
 final class ExpandOptionalTest: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func testExpandA() throws {
+        // given
         let targetA = "/(A)/B/C"
+        
+        // when
         let resultA = targetA.route_scanOptionalPaths()
+        
+        // then
         XCTAssertTrue(resultA[0].isOptional)
         XCTAssertEqual(resultA[0].path, "A")
         XCTAssertFalse(resultA[1].isOptional)
@@ -30,8 +27,13 @@ final class ExpandOptionalTest: XCTestCase {
     }
     
     func testExpandB() {
+        // given
         let targetA = "/A/(B)/C"
+        
+        // when
         let resultA = targetA.route_scanOptionalPaths()
+        
+        // then
         XCTAssertFalse(resultA[0].isOptional)
         XCTAssertEqual(resultA[0].path, "A")
         XCTAssertTrue(resultA[1].isOptional)
@@ -41,8 +43,13 @@ final class ExpandOptionalTest: XCTestCase {
     }
     
     func testExpandC() {
+        // given
         let targetA = "/A/(B/C)"
+        
+        // when
         let resultA = targetA.route_scanOptionalPaths()
+        
+        // then
         XCTAssertFalse(resultA[0].isOptional)
         XCTAssertEqual(resultA[0].path, "A")
         XCTAssertTrue(resultA[1].isOptional)
@@ -52,8 +59,13 @@ final class ExpandOptionalTest: XCTestCase {
     }
     
     func testExpandD() {
+        // given
         let targetA = "/A(/B/C)"
+        
+        // when
         let resultA = targetA.route_scanOptionalPaths()
+        
+        // then
         XCTAssertFalse(resultA[0].isOptional)
         XCTAssertEqual(resultA[0].path, "A")
         XCTAssertTrue(resultA[1].isOptional)
@@ -63,8 +75,13 @@ final class ExpandOptionalTest: XCTestCase {
     }
     
     func testExpandE() {
+        // given
         let targetA = "/A/()/B/C"
+        
+        // when
         let resultA = targetA.route_scanOptionalPaths()
+        
+        // then
         XCTAssertFalse(resultA[0].isOptional)
         XCTAssertEqual(resultA[0].path, "A")
         XCTAssertFalse(resultA[1].isOptional)

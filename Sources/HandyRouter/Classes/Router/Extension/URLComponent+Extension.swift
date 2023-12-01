@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension URLComponents {
+public extension URLComponents {
     func route_queryParameters() -> [String: Any] {
         var parameters: [String: Any] = [:]
         self.queryItems?.forEach { item in

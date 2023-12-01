@@ -12,7 +12,7 @@ public class Response {
     var match: Bool = false
     var parameters: [String: Any]
     
-    init(match: Bool, parameters: [String : Any]) {
+    public init(match: Bool, parameters: [String : Any]) {
         self.match = match
         self.parameters = parameters
     }
