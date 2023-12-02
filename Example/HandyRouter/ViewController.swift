@@ -46,8 +46,8 @@ class ViewController: UITableViewController {
     }
     
     func configRouter() {
-        Router.default.defaultRoute.config(options: [.treatHostAsPathComponent])
-        Router.default.defaultRoute.unmatchHandler = { route, resource, params in
+        Router.shared.defaultRoute.config(options: [.treatHostAsPathComponent])
+        Router.shared.defaultRoute.unmatchHandler = { route, resource, params in
             print("scheme = \(route.scheme)",
                   "url = \(resource.url?.absoluteString ?? "")",
                   "parameters = \(params)")
@@ -55,11 +55,11 @@ class ViewController: UITableViewController {
     }
     
     func registerJumper() {
-        Router.default.register(jumper: CommonJumper.self)
-        Router.default.register(jumper: OptionalJumper.self)
-        Router.default.register(jumper: WildcardJumper.self)
-        Router.default.register(jumper: FragmentJumper.self)
-        Router.default.register(jumper: PageEmptyJumper.self)
+        Router.shared.register(jumper: CommonJumper.self)
+        Router.shared.register(jumper: OptionalJumper.self)
+        Router.shared.register(jumper: WildcardJumper.self)
+        Router.shared.register(jumper: FragmentJumper.self)
+        Router.shared.register(jumper: PageEmptyJumper.self)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -76,7 +76,7 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = datas[indexPath.row]
-        Router.default.route(to: data.url)
+        Router.shared.route(to: data.url)
     }
 
 }
