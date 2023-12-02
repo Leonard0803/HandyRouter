@@ -95,10 +95,9 @@ class NotPassInterceptor: RouteInterceptor {
 
 final class RoutesTest: XCTestCase {
     
-   
     func testOptionalPath() throws {
         // given
-        Router.default.register(jumper: OptionalModuleJumper.self)
+        Router.shared.register(jumper: OptionalModuleJumper.self)
         let targetURLA = "https://www.xxx.com/A/page"
         let targetURLB = "https://www.xxx.com/A/B/page"
         let targetURLC = "https://www.xxx.com/A/B/C/page"
@@ -106,11 +105,11 @@ final class RoutesTest: XCTestCase {
         let targetURLE = "https://www.xxx.com/B/C/page"
         
         // when
-        let resultA = Router.default.canRoute(to: targetURLA)
-        let resultB = Router.default.canRoute(to: targetURLB)
-        let resultC = Router.default.canRoute(to: targetURLC)
-        let resultD = Router.default.canRoute(to: targetURLD)
-        let resultE = Router.default.canRoute(to: targetURLE)
+        let resultA = Router.shared.canRoute(to: targetURLA)
+        let resultB = Router.shared.canRoute(to: targetURLB)
+        let resultC = Router.shared.canRoute(to: targetURLC)
+        let resultD = Router.shared.canRoute(to: targetURLD)
+        let resultE = Router.shared.canRoute(to: targetURLE)
         
         // then
         XCTAssertTrue(resultA)
@@ -120,54 +119,54 @@ final class RoutesTest: XCTestCase {
         XCTAssertFalse(resultE)
         
         // end
-        Router.default.unRegister(jumper: OptionalModuleJumper.self)
+        Router.shared.unRegister(jumper: OptionalModuleJumper.self)
     }
     
     func testTreatHostAsPath() {
         // given
-        Router.default.register(jumper: RouteJumper.self, scheme: "scheme", option: [.treatHostAsPathComponent])
+        Router.shared.register(jumper: RouteJumper.self, scheme: "scheme", option: [.treatHostAsPathComponent])
         let targetURL = "scheme://routeJumper/A"
         
         // when
-        let result = Router.default.canRoute(to: targetURL)
+        let result = Router.shared.canRoute(to: targetURL)
         
         // then
         XCTAssertTrue(result)
         
         // given
-        Router.default.register(jumper: RouteJumper.self, scheme: "schemeA", option: [])
+        Router.shared.register(jumper: RouteJumper.self, scheme: "schemeA", option: [])
         
         // when
         let targetURLA = "schemeA://routeJumper/A"
         
         // then
-        let resultA = Router.default.canRoute(to: targetURLA)
+        let resultA = Router.shared.canRoute(to: targetURLA)
         XCTAssertFalse(resultA)
         
         // end
-        Router.default.unRegister(jumper: RouteJumper.self, scheme: "schemeA")
-        Router.default.unRegister(jumper: RouteJumper.self, scheme: "scheme")
+        Router.shared.unRegister(jumper: RouteJumper.self, scheme: "schemeA")
+        Router.shared.unRegister(jumper: RouteJumper.self, scheme: "scheme")
     }
     
     func testInterceptorRejectAndPass() {
         // given
-        Router.default.register(jumper: OptionalModuleJumper.self, scheme: "reject")
-        Router.default.add(interceptor: WhiteListInterceptor(), for: "reject")
+        Router.shared.register(jumper: OptionalModuleJumper.self, scheme: "reject")
+        Router.shared.add(interceptor: WhiteListInterceptor(), for: "reject")
         
         let targetURLA = "reject://www.notWhiteList.com/A/page"
         let targetURLB = "reject://www.whitelist.com/A/page"
         
         // when
-        let resultA = Router.default.route(to: targetURLA)
-        let resultB = Router.default.route(to: targetURLB)
+        let resultA = Router.shared.route(to: targetURLA)
+        let resultB = Router.shared.route(to: targetURLB)
         
         // then
-        XCTAssertEqual(Router.default.searchRoutes(scheme: "reject").interceptors.count, 1)
+        XCTAssertEqual(Router.shared.searchRoutes(scheme: "reject").interceptors.count, 1)
         XCTAssertFalse(resultA)
         XCTAssertTrue(resultB)
         
         // end
-        Router.default.searchRoutes(scheme: "reject").removeAllInterceptor()
+        Router.shared.searchRoutes(scheme: "reject").removeAllInterceptor()
     }
     
     func testNoScheme() {
@@ -175,48 +174,48 @@ final class RoutesTest: XCTestCase {
         let url = "there/is/no/scheme"
         
         // when
-        let result = Router.default.route(for: url)
+        let result = Router.shared.route(for: url)
         
         // then
-        XCTAssertIdentical(result, Router.default.defaultRoute)
+        XCTAssertIdentical(result, Router.shared.defaultRoute)
     }
     
     func testMutableInterceptorReturnReject() {
         // given
-        Router.default.register(jumper: OptionalModuleJumper.self, scheme: "reject")
-        Router.default.add(interceptor: PassInterceptor(), for: "reject")
-        Router.default.add(interceptor: NotPassInterceptor(), for: "reject")
+        Router.shared.register(jumper: OptionalModuleJumper.self, scheme: "reject")
+        Router.shared.add(interceptor: PassInterceptor(), for: "reject")
+        Router.shared.add(interceptor: NotPassInterceptor(), for: "reject")
         
         let targetURLA = "reject://www.notPass.com/A/page"
         
         // when
-        let resultA = Router.default.route(to: targetURLA)
+        let resultA = Router.shared.route(to: targetURLA)
         
         // then
         XCTAssertFalse(resultA)
         
         // end
-        Router.default.register(jumper: OptionalModuleJumper.self, scheme: "reject")
-        Router.default.searchRoutes(scheme: "reject").removeAllInterceptor()
+        Router.shared.register(jumper: OptionalModuleJumper.self, scheme: "reject")
+        Router.shared.searchRoutes(scheme: "reject").removeAllInterceptor()
     }
     
     func testMutableInterceptorReturnPass() {
         // given
-        Router.default.register(jumper: OptionalModuleJumper.self, scheme: "pass")
-        Router.default.add(interceptor: PassInterceptor(), for: "pass")
-        Router.default.add(interceptor: PassInterceptor(), for: "pass")
+        Router.shared.register(jumper: OptionalModuleJumper.self, scheme: "pass")
+        Router.shared.add(interceptor: PassInterceptor(), for: "pass")
+        Router.shared.add(interceptor: PassInterceptor(), for: "pass")
         
         let targetURLA = "pass://www.notPass.com/A/page"
         
         // when
-        let resultA = Router.default.route(to: targetURLA)
+        let resultA = Router.shared.route(to: targetURLA)
         
         // then
         XCTAssertTrue(resultA)
         
         // end
-        Router.default.register(jumper: OptionalModuleJumper.self, scheme: "pass")
-        Router.default.searchRoutes(scheme: "pass").removeAllInterceptor()
+        Router.shared.register(jumper: OptionalModuleJumper.self, scheme: "pass")
+        Router.shared.searchRoutes(scheme: "pass").removeAllInterceptor()
     }
     
     func testAddDefinitionInOrderOfPriority() {
@@ -225,12 +224,12 @@ final class RoutesTest: XCTestCase {
         let definition1 = Definition.init(jumper: RouteJumper.self, pattern: "definition1", priority: 1)
         
         // when
-        Router.default.defaultRoute.add(definition: definition0)
-        Router.default.defaultRoute.add(definition: definition1)
+        Router.shared.defaultRoute.add(definition: definition0)
+        Router.shared.defaultRoute.add(definition: definition1)
         
         // then
-        XCTAssertEqual(Router.default.defaultRoute.definitions[0] as! Definition<RouteJumper>, definition1)
-        XCTAssertEqual(Router.default.defaultRoute.definitions[1] as! Definition<RouteJumper>, definition0)
+        XCTAssertEqual(Router.shared.defaultRoute.definitions[0] as! Definition<RouteJumper>, definition1)
+        XCTAssertEqual(Router.shared.defaultRoute.definitions[1] as! Definition<RouteJumper>, definition0)
     }
     
     func testRoutesConfiguration() {
@@ -238,12 +237,12 @@ final class RoutesTest: XCTestCase {
         let configuration: [RouteOption] = [.treatHostAsPathComponent]
         
         // when
-        Router.default.defaultRoute.config(options: configuration)
+        Router.shared.defaultRoute.config(options: configuration)
         
         // then
-        XCTAssertEqual(configuration, Router.default.defaultRoute.routeOption)
+        XCTAssertEqual(configuration, Router.shared.defaultRoute.routeOption)
         
         // end
-        Router.default.defaultRoute.routeOption = []
+        Router.shared.defaultRoute.routeOption = []
     }
 }

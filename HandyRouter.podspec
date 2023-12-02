@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/Leonard0803/HandyRoute'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Shelley' => 'aionyiruma@163.com' }
-  s.source           = { :git => 'https://github.com/Leonard0803/HandyRoute.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Leonard0803/HandyRouter.git', :tag => s.version.to_s }
   s.ios.deployment_target = '13.0'
   s.source_files = 'Sources/**/*'
   s.frameworks = 'UIKit', 'Foundation'

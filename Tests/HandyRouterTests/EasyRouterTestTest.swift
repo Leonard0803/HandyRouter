@@ -10,11 +10,11 @@ import HandyRouter
 
 final class HandyRouterTests: XCTestCase {
     
-    let suite = Router.default
+    let suite = Router.shared
 
     func testCanRoute() throws {
         // given
-        Router.default.register(jumper: ModuleJumper.self)
+        Router.shared.register(jumper: ModuleJumper.self)
         let url1 = "https://www.HandyRouter.com/module/pageA"
         let url2 = "https://www.HandyRouter.com/module/pageB"
         let url3 = "https://www.HandyRouter.com/module/pageC#fragment"
@@ -39,12 +39,12 @@ final class HandyRouterTests: XCTestCase {
         XCTAssertEqual(canRouteUrl6, false)
         
         // end
-        Router.default.unRegister(jumper: ModuleJumper.self)
+        Router.shared.unRegister(jumper: ModuleJumper.self)
     }
     
     func testRouteTo() throws {
         // given
-        Router.default.register(jumper: ModuleJumper.self)
+        Router.shared.register(jumper: ModuleJumper.self)
         let url1 = "https://www.HandyRouter.com/module/pageA"
         let url2 = "https://www.HandyRouter.com/module/pageB"
         let url3 = "https://www.HandyRouter.com/module/pageC#fragment"
@@ -69,6 +69,6 @@ final class HandyRouterTests: XCTestCase {
         XCTAssertEqual(canRouteUrl6, false)
         
         // end
-        Router.default.unRegister(jumper: ModuleJumper.self)
+        Router.shared.unRegister(jumper: ModuleJumper.self)
     }
 }

@@ -11,7 +11,7 @@ public class Router {
     public static let defaultScheme = "__DefaultScheme__"
     public static let pagePlaceHolder = ":__PAGE__"
     
-    public static let `default` = Router(shouldFallBack: true)
+    public static let shared = Router(shouldFallBack: true)
     
     public private(set) lazy var defaultRoute = createRoutes(for: Router.defaultScheme, option: [])
     
@@ -21,6 +21,10 @@ public class Router {
     
     public init(shouldFallBack: Bool) {
         self.shouldFallBack = shouldFallBack
+    }
+    
+    public subscript(scheme: String) -> Routes {
+        return searchRoutes(scheme: scheme)
     }
     
     public func register<T: Jumper>(jumper: T.Type, scheme: String = defaultScheme, option: [RouteOption] = []) {
