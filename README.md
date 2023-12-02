@@ -1,6 +1,5 @@
 # HandyRouter
 
-[![CI Status](https://img.shields.io/travis/Shelley/HandyRouter.svg?style=flat)](https://travis-ci.org/Shelley/HandyRouter)
 [![Version](https://img.shields.io/cocoapods/v/HandyRouter.svg?style=flat)](https://cocoapods.org/pods/HandyRouter)
 [![License](https://img.shields.io/cocoapods/l/HandyRouter.svg?style=flat)](https://cocoapods.org/pods/HandyRouter)
 [![Platform](https://img.shields.io/cocoapods/p/HandyRouter.svg?style=flat)](https://cocoapods.org/pods/HandyRouter)
