@@ -19,6 +19,44 @@ struct URLData {
     }
 }
 
+extension Dictionary where Key == ParameterKey {
+    func toArrayValue() -> [String] {
+        if let array = self[.arrayTypeDemo] as? [String] {
+            return array
+        }
+        return []
+    }
+    func toStringValue() -> String {
+        if let string = self[.stringTypeDemo] as? String {
+            return string
+        }
+        return ""
+    }
+}
+
+extension ParameterKey {
+    static let arrayTypeDemo: ParameterKey = "arrayTypeDemo"
+    static let stringTypeDemo: ParameterKey = "stringTypeDemo"
+}
+
+enum RouteJumper: String, Jumper {
+    
+    case A = "A"
+    
+    static var module: String {
+        return "Module"
+    }
+
+     static func jump(to page: RouteJumper, parameters: [HandyRouter.ParameterKey : Any]) -> Bool {
+        switch page {
+        case .A:
+            print("has handled")
+            return true
+        }
+    }
+}
+
+
 class ViewController: UITableViewController {
 
     let datas: [URLData] = [
@@ -40,9 +78,8 @@ class ViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
-//        configRouter()
-//        registerJumper()
+        configRouter()
+        registerJumper()
     }
     
     func configRouter() {
