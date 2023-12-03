@@ -27,6 +27,10 @@ public class Router {
         return searchRoutes(scheme: scheme)
     }
     
+    public func config(shouldFallBack: Bool) {
+        self.shouldFallBack = shouldFallBack
+    }
+    
     public func register<T: Jumper>(jumper: T.Type, scheme: String = defaultScheme, option: [RouteOption] = []) {
         let pattern = jumper.module.trimmingCharacters(in: ["/"])
         let definition = Definition<T>.init(jumper: jumper, pattern: pattern + "/\(Router.pagePlaceHolder)")
