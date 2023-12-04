@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'HandyRouter'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A router for swift that can handle deeplink conveniently.'
   s.homepage         = 'https://github.com/Leonard0803/HandyRoute'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
